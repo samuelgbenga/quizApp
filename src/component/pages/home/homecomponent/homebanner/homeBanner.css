@@ -33,9 +33,11 @@
 }
 .homeBannerRow .col2 p {
   line-height: 26px;
+  color: rgb(1, 15, 15);
 }
 .homeBannerRow .col2 h3 {
   font-size: 40px;
+  color: rgb(0, 200, 200);
 }
 @media only screen and (max-width: 1020px) {
   .homeBannerContainer .col2 h3 {

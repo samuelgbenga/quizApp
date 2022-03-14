@@ -4,31 +4,33 @@
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
+  height: 520px;
 }
 .homeFormWrapper {
-  /* padding-top: 10px; */
-
-  height: 100px;
-
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  width: 70%;
+  width: 95%;
+  height: 95%;
 }
-.homeFormHead {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.formField {
+  flex: 1;
+  height: 100%;
 }
-.forName {
-  color: white;
-  margin: auto 5px;
-  font-size: 13px;
+.catGallary {
+  flex: 2;
+  height: 100%;
+  border-left: rgba(204, 204, 204, 0.1) solid 2px;
 }
-#name {
-  height: 18px;
-  color: white;
-}
-.categories {
-  color: white;
+@media only screen and (max-width: 700px) {
+  .homeFormWrapper {
+    display: block;
+  }
+  .formField {
+    height: 70%;
+  }
+  .catGallary {
+    height: 30%;
+    border-left: none;
+    border-top: rgba(204, 204, 204, 0.1) solid 2px;
+  }
 }
