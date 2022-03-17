@@ -1,0 +1,21 @@
+.questionBarWrapper {
+  width: 80%;
+  margin: 7px auto;
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+  gap: 3px;
+}
+.questionBarWrapper div {
+  width: 150px;
+  height: 2px;
+  background-color: rgba(105, 105, 105, 0.692);
+  border-radius: 4px;
+}
+.questionBarWrapper .bar.red {
+  background-color: white;
+}
+.questionBarWrapper .bar.blue {
+  background-color: rgb(0, 200, 200);
+}

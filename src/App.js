@@ -11,6 +11,7 @@ import axios from "axios";
 function App() {
   const [question, setQuestion] = useState("");
   const [score, setScore] = useState("");
+  const [name, setName] = useState("");
 
   const fetchQuestion = async (category, difficulty, name) => {
     // const cat = 10;
@@ -20,8 +21,11 @@ function App() {
         category && `&category=${category}`
       }${difficulty && `&difficulty=${difficulty}`}&type=multiple`
     );
-    // console.log(category, difficult, name);
-    data && console.log(data, name, category, difficulty);
+    // data && console.log(data.results);
+    // data && console.log(data, name, category, difficulty);
+    name && setName(name);
+
+    setQuestion(data.results);
   };
   return (
     <Router>
@@ -34,7 +38,17 @@ function App() {
                 path="/"
                 element={<Home fetchQuestion={fetchQuestion} />}
               />
-              <Route path="/quiz" element={<Quiz />} />
+              <Route
+                path="/quiz"
+                element={
+                  <Quiz
+                    name={name}
+                    score={score}
+                    setScore={setScore}
+                    question={question}
+                  />
+                }
+              />
               <Route path="/result" element={<Result />} />
             </Routes>
           </div>

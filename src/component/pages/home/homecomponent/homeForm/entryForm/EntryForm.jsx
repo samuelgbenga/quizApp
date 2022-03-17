@@ -53,13 +53,18 @@ const BootstrapButton = styled(Button)({
     boxShadow: "0 0 0 0.05rem rgba(0,123,255,.2)",
   },
 });
+// function to extract image from a folder
+
+// testing the image file for any error
 
 export default function EntryForm({ fetchQuestion }) {
   const [category, setCategory] = useState("");
+
   const [difficulty, setDifficulty] = useState("");
   const [name, setName] = useState("");
   const [error, setError] = useState(false);
   let navigate = useNavigate();
+
   const handleSubmit = () => {
     if (!category || !difficulty || !name) {
       setError(true);
@@ -96,7 +101,9 @@ export default function EntryForm({ fetchQuestion }) {
             label="Enter Your Full Name"
             placeholder="ex: Samuel Gbenga Joseph"
             variant="standard"
-            onChange={(e) => setName(e.target.value)}
+            onChange={(e) => {
+              setName(e.target.value);
+            }}
             value={name}
           />
           <CssTextField
@@ -104,7 +111,9 @@ export default function EntryForm({ fetchQuestion }) {
             defaultValue={""}
             label="Select Category"
             variant="standard"
-            onChange={(e) => setCategory(e.target.value)}
+            onChange={(e) => {
+              setCategory(e.target.value);
+            }}
           >
             {Catergories.map((cat) => (
               <MenuItem value={cat.value} key={cat.category}>
@@ -121,7 +130,7 @@ export default function EntryForm({ fetchQuestion }) {
           >
             <MenuItem value="easy">Easy</MenuItem>
             <MenuItem value="medium">Medium</MenuItem>
-            <MenuItem value="difficult">Difficult</MenuItem>
+            <MenuItem value="hard">Hard</MenuItem>
           </CssTextField>
           <BootstrapButton
             variant="contained"

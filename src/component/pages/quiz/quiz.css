@@ -1,0 +1,27 @@
+.quizContainer {
+  padding: 5px 20px;
+  text-align: center;
+}
+
+.quizHead {
+  font-size: 24px;
+}
+.quizTitle {
+  color: rgba(122, 122, 122, 0.685);
+  margin-bottom: 10px;
+  font-size: 17px;
+  font-weight: 600;
+}
+.quesNum {
+  color: rgb(221, 221, 221);
+  font-weight: 500;
+}
+.quesNum .currentLength {
+  font-weight: 600;
+  font-size: 26px;
+  color: white;
+}
+.quesNum .quesLength {
+  color: rgb(128, 128, 128);
+  font-size: 18px;
+}
