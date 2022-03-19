@@ -9,7 +9,7 @@
 
 .appWrapper {
   background: rgba(24, 28, 52, 1);
-  height: 100vh;
+  min-height: 100vh;
   width: 98.9%;
   margin: 18px auto;
   border-radius: 8px;

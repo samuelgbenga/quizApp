@@ -14,8 +14,14 @@
   border-radius: 4px;
 }
 .questionBarWrapper .bar.red {
-  background-color: white;
+  background-color: red;
 }
 .questionBarWrapper .bar.blue {
   background-color: rgb(0, 200, 200);
+}
+.questionBarWrapper .bar.green {
+  background-color: green;
+}
+.questionBarWrapper .bar.white {
+  background-color: white;
 }

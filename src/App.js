@@ -10,8 +10,8 @@ import axios from "axios";
 
 function App() {
   const [question, setQuestion] = useState("");
-  const [score, setScore] = useState("");
   const [name, setName] = useState("");
+  const [mainScore, setMainScore] = useState(0);
 
   const fetchQuestion = async (category, difficulty, name) => {
     // const cat = 10;
@@ -43,13 +43,21 @@ function App() {
                 element={
                   <Quiz
                     name={name}
-                    score={score}
-                    setScore={setScore}
                     question={question}
+                    setMainScore={setMainScore}
                   />
                 }
               />
-              <Route path="/result" element={<Result />} />
+              <Route
+                path="/result"
+                element={
+                  <Result
+                    mainScore={mainScore}
+                    name={name}
+                    setMainScore={setMainScore}
+                  />
+                }
+              />
             </Routes>
           </div>
         </div>

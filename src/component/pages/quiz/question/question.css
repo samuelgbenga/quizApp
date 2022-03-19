@@ -9,9 +9,10 @@
   border-radius: 8px;
   border: solid rgba(128, 128, 128, 0.411) 2px;
   color: whitesmoke;
-  margin: 20px 0;
+  margin: 13px 0;
+
   min-height: 85px;
-  font-size: 21px;
+  font-size: 19px;
 }
 .optionWrapper {
   display: flex;
@@ -20,15 +21,21 @@
   gap: 20px;
   flex-wrap: wrap;
 }
+.error {
+  color: rgb(255, 101, 101);
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+}
 .optionWrapper button {
-  min-height: 70px;
+  min-height: 60px;
   width: 48%;
   border-radius: 8px;
   border: solid rgba(207, 207, 207, 0.644) 2px;
   color: whitesmoke;
   transition: all 0.2s;
   background-color: transparent;
-  font-size: 18px;
+  font-size: 15px;
 }
 .optionWrapper button:hover {
   background-color: rgba(255, 255, 255, 0.055);
@@ -46,6 +53,16 @@
   border-radius: 50%;
   border: solid gray 2px;
   cursor: pointer;
+}
+.optionWrapper button.rightSelection div {
+  background-color: rgb(47, 255, 47);
+}
+.optionWrapper button.wrongSelection div {
+  background-color: rgb(255, 20, 20);
+}
+.optionWrapper button.unselected {
+  background-color: rgba(255, 255, 255, 0.055);
+  color: rgba(255, 255, 255, 0.63);
 }
 
 .nextQuitWrapper {

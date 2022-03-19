@@ -1,13 +1,20 @@
 import React from "react";
 import "./questionBar.css";
-export default function QuestionBar({ question, currentQues }) {
+
+export default function QuestionBar({ currentQues, score }) {
   return (
     <div className="questionBarWrapper">
-      {question.map((elem, index) => {
+      {score.map((elem, index) => {
         return (
           <div
             className={`bar ${
-              index > currentQues ? "" : index === currentQues ? "red" : "blue"
+              index > currentQues
+                ? ""
+                : index === currentQues
+                ? "blue"
+                : elem === 1
+                ? "green"
+                : "red"
             }`}
             key={index}
           ></div>
